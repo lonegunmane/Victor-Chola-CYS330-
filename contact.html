@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Victor Chola</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Exo+2:wght@300;400;600;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/style.css"/>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="/">VICTOR CHOLA</a>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/contact" class="active">Contact</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="page-label">// CONTACT</div>
+  <h1>Get In <span>Touch</span></h1>
+  <p>Feel free to reach out for academic collaborations, cybersecurity discussions, or any enquiries.</p>
+</div>
+
+<section class="contact-section">
+  <div class="section-label">// SEND A MESSAGE</div>
+  <div class="contact-grid">
+
+    <!-- Contact info -->
+    <div class="contact-info">
+      <h2>Contact Details</h2>
+
+      <div class="info-item">
+        <span class="lbl">Email</span>
+        <span class="val"><a href="mailto:victorchola@student.kmu.ac.zm">victorchola@student.kmu.ac.zm</a></span>
+      </div>
+
+      <div class="info-item">
+        <span class="lbl">University</span>
+        <span class="val">Kapasa Makasa University</span>
+        <span class="val" style="font-size:0.7rem;color:var(--muted)">BSc Cybersecurity &mdash; Final Year</span>
+      </div>
+
+      <div class="info-item">
+        <span class="lbl">Location</span>
+        <span class="val">Chinsali District</span>
+        <span class="val" style="font-size:0.7rem;color:var(--muted)">Muchinga Province, Zambia</span>
+      </div>
+
+      <div class="info-item">
+        <span class="lbl">LinkedIn</span>
+        <span class="val"><a href="https://linkedin.com/in/victorchola" target="_blank">linkedin.com/in/victorchola</a></span>
+      </div>
+
+      <div class="info-item" style="margin-top:1.5rem;">
+        <span class="lbl">Site Visits</span>
+        <span class="val" style="color:var(--accent)">{{visits}}</span>
+      </div>
+    </div>
+
+    <!-- Contact form -->
+    <div class="contact-form">
+      <h2>Send a Message</h2>
+
+      {{message}}
+      {{error}}
+
+      <form method="POST" action="/contact">
+        <div class="form-group">
+          <label for="name">Name *</label>
+          <input type="text" id="name" name="name" placeholder="Your full name" required/>
+        </div>
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required/>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="What is this about?"/>
+        </div>
+        <div class="form-group">
+          <label for="body">Message *</label>
+          <textarea id="body" name="body" placeholder="Write your message here..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<section class="uni-section">
+  <div class="section-label">// INSTITUTION</div>
+  <div class="uni-box">
+    <div class="uni-logo">
+      <img src="/images/kmu-logo.jpeg" alt="Kapasa Makasa University Logo" onerror="this.style.display='none'"/>
+    </div>
+    <div class="uni-info">
+      <h3>Kapasa Makasa University</h3>
+      <p>Chinsali, Muchinga Province, Zambia</p>
+      <p>Motto: Learn to Innovate</p>
+      <p>Programme: BSc Cybersecurity</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 Victor Chola &mdash; Kapasa Makasa University</p>
+  <div class="foot-links">
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+  </div>
+</footer>
+
+</body>
+</html>
